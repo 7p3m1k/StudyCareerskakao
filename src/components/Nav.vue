@@ -12,6 +12,7 @@
     </ul>
     <div class="login">
       로그인
+      <i class="bi bi-caret-down-fill"></i>
     </div>
   </div>
 </template>
