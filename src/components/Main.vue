@@ -32,12 +32,29 @@
         </ul>
         <div class="section_top_list">
           <div class="big-card">
-            기술과 사람으로 더 나은 세상을 만듭니다.
+            <div class="card-text">기술과 사람으로 더 나은 세상을 만듭니다.</div>
+            <button>
+              카카오 문화 바로가기
+              <i class="bi bi-arrow-right"></i>
+            </button>
+            <div class="big-card_img">
+              <img src="https://t1.kakaocdn.net/career_public/images/img_culture.png" alt="">
+            </div>
           </div>
-          <div>
-            100% 리얼 스토리 <br/>
-            카카오 크루 이야기
-          </div>
+          <ul>
+            <li>
+              100% 리얼 스토리 <br/>
+              카카오 크루 이야기
+            </li>
+            <li>
+              100% 리얼 스토리 <br/>
+              카카오 크루 이야기
+            </li>
+            <li>
+              100% 리얼 스토리 <br/>
+              카카오 크루 이야기
+            </li>
+          </ul>
         </div>
       </div>
       <div class="section-bottom">
@@ -139,8 +156,43 @@ li {
 .big-card {
   width: 100%;
   padding: 60px;
-  margin-bottom: 36px;
   text-align: center;
+  margin-bottom: 36px;
+  border-radius: 21px;
+  border: 1px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.big-card:hover {
+  transform: scale(1.02);
+  box-shadow: 5px 5px 20px 2px rgba(0,0,0,0.24);
+}
+
+.card-text {
+  display: block;
+  margin: 0;
+  min-height: 0;
+  font-size: 40px;
+  line-height: 62px;
+  letter-spacing: -3.5px;
+  font-weight: bold;
+}
+
+.big-card > button {
+  padding: 10px 19px 12px 20px;
+  margin: 36px 0 54px;
+  border-radius: 21px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 20px;
+  letter-spacing: -0.2px;
+  background: #000;
+  cursor: pointer;
+}
+
+.big-card_img > img{
+  width: 850px;
 }
 
 </style>
