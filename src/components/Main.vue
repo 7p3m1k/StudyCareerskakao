@@ -123,6 +123,7 @@
 
       </div>
     </div>
+
     <Footer />
   </div>
 </template>
@@ -229,6 +230,7 @@ li {
   margin-bottom: 36px;
   border-radius: 21px;
   border: 1px solid #fff;
+  background: #ffffff;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
@@ -434,6 +436,7 @@ li {
   line-height: 1.56;
   letter-spacing: -0.5px;
   background: #eee;
+  cursor: pointer;
 }
 
 .section_bottom_more-btn:after {

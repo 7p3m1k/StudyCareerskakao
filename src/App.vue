@@ -1,5 +1,7 @@
 <template>
-  <Main />
+  <div class="App">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
@@ -13,3 +15,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .App {
+    background: #f9f9f9;
+  }
+</style>
