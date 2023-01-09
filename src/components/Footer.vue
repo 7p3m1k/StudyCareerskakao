@@ -23,7 +23,7 @@
       </ul>
       <div class="info">
         <div class="info-left">
-          <a href="" class="info01">개인정보처리방침</a>
+          <a href="" class="info01 active">개인정보처리방침</a>
           <a href="" class="info02">이용약관</a>
           <a href="" class="ko">한국어</a>
           <div class="copyright">
@@ -127,4 +127,65 @@ ul {
   display: flex;
   justify-content: space-between;
 }
+
+/*info-left*/
+
+.info-left > a{
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  vertical-align: bottom;
+  letter-spacing: -0.4px;
+}
+
+.info01 {
+  color: black;
+  font-weight: bold;
+  padding-right: 20px;
+}
+
+.info02 {
+  padding-right: 20px;
+  color: #888;
+}
+
+.ko {
+  color: #888;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #888;
+  line-height: 20px;
+}
+
+/*info-right*/
+
+.other-site {
+  width: 222px;
+  padding: 10px 24px 11px;
+  border-radius: 24px;
+  font-size: 13px;
+  color: #888;
+  letter-spacing: -0.2px;
+  background: #eee;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.other-site:after {
+  display: inline-block;
+  text-indent: -9999px;
+  background: url(../assets/ico_jobs.png) 0 -160px no-repeat;
+  background-size: 260px 251px;
+  vertical-align: top;
+  content: '';
+  width: 12px;
+  height: 12px;
+  margin-top: 5px;
+}
+
 </style>
