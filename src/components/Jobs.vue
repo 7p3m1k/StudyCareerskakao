@@ -5,8 +5,8 @@
       <div class="recruit">
         <div class="recruit-tab">
           <ul class="tab-lists">
-            <li v-for="(list, i) in tabList" :key="i" :class="{active:currentTab === i}">
-              <span @click.prevent="currentTab = i">{{list.tab}}</span>
+            <li v-for="(list, i) in tabList" :key="i">
+              <span :class="{active:currentTab === i}" @click.prevent="currentTab = i">{{list.tab}}</span>
               <span @click.prevent="currentTab = i" class="num">{{list.num}}</span>
             </li>
           </ul>
@@ -242,7 +242,7 @@ export default {
   .tab-lists > li {
     width: 25%;
     text-align: center;
-    padding: 30px;
+    padding: 30px 0 0 0;
   }
 
   .tab-lists > li > span {
@@ -265,7 +265,10 @@ export default {
   }
 
   .active {
+    display: inline-block;
+    padding-bottom: 30px;
     color: #ffffff;
+    border-bottom: 2px solid #ffffff;
   }
 
   .selected {
