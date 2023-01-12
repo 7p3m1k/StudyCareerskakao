@@ -5,18 +5,18 @@
       <div class="recruit">
         <div class="recruit-tab">
           <ul class="tab-lists">
-            <li class="active">테크<span class="num">40</span> </li>
-            <li>서비스비즈<span class="num">18</span></li>
-            <li>디자인/브랜드<span class="num">7</span></li>
-            <li>스태프<span class="num">7</span></li>
+            <li v-for="(list, i) in tabList" :key="i" :class="{active:currentTab === i}">
+              <span @click.prevent="currentTab = i">{{list.tab}}</span>
+              <span @click.prevent="currentTab = i" class="num">{{list.num}}</span>
+            </li>
           </ul>
-            <ul class="recruit-tab-sub">
-              <li class="selected">카카오</li>
-              <li class="selected">전체 직원유형</li>
-              <li>
-                <input type="text" placeholder="검색어를 입력하세요.">
-              </li>
-            </ul>
+          <ul class="recruit-tab-sub">
+            <li class="selected">카카오</li>
+            <li class="selected">전체 직원유형</li>
+            <li>
+              <input type="text" placeholder="검색어를 입력하세요.">
+            </li>
+          </ul>
         </div>
         <div class="hashTag-wrapper">
           <div class="hashTag-desc">
@@ -47,7 +47,7 @@
           </ul>
         </div>
         <div class="recruit-lists">
-            <ul class="recruit-list-wrapper">
+            <ul class="recruit-list-wrapper" v-show="currentTab == 0">
               <li class="list">
                 <div class="list-title">
                   카카오 데이터센터 운영 총괄
@@ -187,6 +187,33 @@ import Nav from "./Nav.vue";
 import Footer from "./Footer.vue";
 export default {
   components: {Footer, Nav},
+  data() {
+    return {
+      currentTab : 0,
+      tabList : [
+        {
+          tab: '테크',
+          num: 40,
+          link : '#',
+        },
+        {
+          tab: '서비스비즈',
+          num: 18,
+          link : '#',
+        },
+        {
+          tab: '디자인/브랜드',
+          num: 7,
+          link : '#',
+        },
+        {
+          tab: '스태프',
+          num: 7,
+          link : '#',
+        },
+      ]
+    }
+  }
 }
 </script>
 
@@ -216,6 +243,10 @@ export default {
     width: 25%;
     text-align: center;
     padding: 30px;
+  }
+
+  .tab-lists > li > span {
+    cursor: pointer;
   }
 
   .num {
